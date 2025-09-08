@@ -45,7 +45,6 @@ Wavestrap is only supported for PCs running Windows.
 
 ## Installing
 Download the [latest release of Wavestrap](https://github.com/999MS-LLC/WaveStrap/releases/latest), and run it. Configure your preferences if needed, and install. That's about it!
-```
 
 You will also need the [.NET 6 Desktop Runtime](https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win11-x64&apphost_version=6.0.16&gui=true). If you don't already have it installed, you'll be prompted to install it anyway. Be sure to install Wavestrap after you've installed this.
 
