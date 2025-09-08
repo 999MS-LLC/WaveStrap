@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>999MS LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <meta name="description" content="999MS LLC - Your trusted partner in technology solutions.">
+    <meta name="keywords" content="999MS, LLC, technology, solutions, software, development">
+    <meta name="author" content="999MS LLC">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/resource/image/favicon.svg" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="999MS LLC">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="999MS LLC">
+    <meta property="og:description" content="Your trusted partner in technology solutions.">
+    <meta property="og:image" content="/resource/image/999MSStrap.png">
+    <meta property="og:url" content="https://999msllc.pages.dev">
+    <meta property="og:type" content="website">
+    <meta property="og:author" content="999MS LLC">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@999msllc">
+    <meta name="twitter:creator" content="@999msllc">
+    <meta name="twitter:title" content="999MS LLC">
+    <meta name="twitter:description" content="Your trusted partner in technology solutions.">
+    <meta name="twitter:image" content="/resource/image/999MSStrap.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/resource/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <select id="effectSelector">
+        <option value="network">🌐 Network Nodes</option>
+        <option value="bubbles">💡 Glow Bubbles</option>
+        <option value="snow">❄ Snow</option>
+        <option value="burst">🚀 Burst</option>
+        <option value="orbit">🪐 Orbit</option>
+        <option value="follow">🖱 Follow Mouse</option>
+    </select>
+    <div id="particles-js"></div>
+    <div class="star-background">
+      <!-- Stars will be dynamically added here by JavaScript -->
+    </div>
+<div class="content">
+<h1 id="rainbow-text" style="font-size: 50px; font-family: 'Changa One', sans-serif;"></h1>
+  <p style="font-family: 'Lobster', sans-serif;">Chúng tôi phát triển phần mềm hiện đại, sáng tạo và bảo mật cao, giúp doanh nghiệp vươn tới thành công.</p>
+</div>
+
+<script>
+const farbbibliothek = [
+  ["#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"],
+  ["#00FF00","#000000","#00FF00","#00FF00"],
+  ["#00FF00","#FF0000"],
+  ["#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"],
+  ["#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"],
+  ["#000000","#FFFFFF"],
+  ["#0000FF","#FFFF00"]
+];
+
+let farben = [...farbbibliothek[4]];
+const text = "999MS LLC";
+const container = document.getElementById("rainbow-text");
+
+container.innerHTML = text
+  .split("")
+  .map((ch, i) => `<span id="a${i}">${ch}</span>`)
+  .join("");
+
+function farbschrift() {
+  [...text].forEach((_, i) => {
+    document.getElementById("a" + i).style.color = farben[i % farben.length];
+  });
+  farbverlauf();
+}
+
+function farbverlauf() {
+  farben.push(farben.shift()); // xoay mảng màu
+  setTimeout(farbschrift, 80);
+}
+
+function farbtauscher() {
+  farben = [...farbbibliothek[Math.floor(Math.random() * farbbibliothek.length)]];
+  while (farben.length < text.length) {
+    farben = farben.concat(farben);
+  }
+}
+setInterval(farbtauscher, 5000);
+
+farbschrift();
+</script>
+</header>
+<footer>
+    © 2023-2025 999MS LLC - All Rights Reserved.
+</footer>
+<script src="particles_js/2.0.0/particles.min.js"></script>
+<script>
+const configs = {
+    network: {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#00d4ff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            line_linked: { enable: true, distance: 150, color: "#00d4ff", opacity: 0.4, width: 1 },
+            move: { enable: true, speed: 2 }
+        },
+        interactivity: {
+            events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "push" }
+            },
+            modes: {
+                grab: { distance: 140, line_linked: { opacity: 1 } },
+                push: { particles_nb: 4 }
+            }
+        },
+        retina_detect: true
+    },
+    bubbles: {
+        particles: {
+            number: { value: 50 },
+            color: { value: "#00eaff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.3 },
+            size: { value: 10, random: true },
+            move: { enable: true, speed: 1, direction: "top", out_mode: "out" }
+        },
+        interactivity: { events: {} },
+        retina_detect: true
+    },
+    snow: {
+        particles: {
+            number: { value: 150 },
+            color: { value: "#fff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.8 },
+            size: { value: 3, random: true },
+            move: { enable: true, speed: 2, direction: "bottom", out_mode: "out" }
+        },
+        interactivity: { events: {} },
+        retina_detect: true
+    },
+    burst: {
+        particles: {
+            number: { value: 60 },
+            color: { value: "#ff6f91" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5 },
+            size: { value: 4, random: true },
+            move: { enable: true, speed: 3 }
+        },
+        interactivity: {
+            events: { onclick: { enable: true, mode: "push" } },
+            modes: { push: { particles_nb: 20 } }
+        },
+        retina_detect: true
+    },
+    orbit: {
+        particles: {
+            number: { value: 30 },
+            color: { value: "#00ffea" },
+            shape: { type: "circle" },
+            opacity: { value: 0.8 },
+            size: { value: 5 },
+            move: { enable: true, speed: 2, random: true, out_mode: "bounce" }
+        },
+        interactivity: {
+            events: { onhover: { enable: true, mode: "repulse" } },
+            modes: { repulse: { distance: 100 } }
+        },
+        retina_detect: true
+    },
+    follow: {
+        particles: {
+            number: { value: 60 },
+            color: { value: "#ffea00" },
+            shape: { type: "circle" },
+            opacity: { value: 0.7 },
+            size: { value: 4, random: true },
+            move: { enable: true, speed: 3 }
+        },
+        interactivity: {
+            events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "repulse" }
+            },
+            modes: {
+                grab: { distance: 200, line_linked: { opacity: 1 } },
+                repulse: { distance: 200 }
+            }
+        },
+        retina_detect: true
+    }
+};
+// Hàm load lại hiệu ứng
+function loadEffect(name) {
+    if (window.pJSDom && pJSDom.length > 0) {
+        pJSDom[0].pJS.fn.vendors.destroypJS();
+        pJSDom = [];
+    }
+    particlesJS("particles-js", configs[name]);
+}
+// Đổi hiệu ứng khi chọn menu
+document.getElementById("effectSelector").addEventListener("change", function() {
+    loadEffect(this.value);
+});
+// Load hiệu ứng mặc định
+loadEffect("network");
+document.addEventListener("DOMContentLoaded", () => {
+  const starBackground = document.querySelector(".star-background");
+  const numberOfStars = 300;
+  // Function to generate a deterministic pseudo-random number based on an index
+  // This ensures the same pattern on every page load.
+  function deterministicRandom(seed) {
+    const x = Math.sin(seed) * 10000;
+    return x - Math.floor(x);
+  }
+  for (let i = 0; i < numberOfStars; i++) {
+    const star = document.createElement("div");
+    star.classList.add("star");
+    // Use the index 'i' as a seed for deterministic properties
+    const size = deterministicRandom(i * 1.234) * 1.8 + 0.7; // 0.7px to 2.5px
+    const x = deterministicRandom(i * 5.678) * 100; // 0% to 100% width
+    const y = deterministicRandom(i * 9.012) * 100; // 0% to 100% height
+    const delay = deterministicRandom(i * 3.456) * 5; // 0s to 5s delay
+    const duration = deterministicRandom(i * 7.89) * 3 + 2; // 2s to 5s duration
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${x}%`;
+    star.style.top = `${y}%`;
+    star.style.animationDelay = `${delay}s`;
+    star.style.animationDuration = `${duration}s`;
+    starBackground.appendChild(star);
+  }
+});
+</script>
+</body>
+</html>
