@@ -1,5 +1,5 @@
 > [!CAUTION]
-> The only official places to download Wavestrap are this GitHub repository and [999msllc.pages.dev](https://999msllc.pages.dev). Any other websites offering downloads or claiming to be us are not controlled by us.
+> The only official places to download Wavestrap are this GitHub repository and [999msllc.pages.dev](https://999msllc.pages.dev/wavestrap). Any other websites offering downloads or claiming to be us are not controlled by us.
 
 <p align="center">
     <img src="https://github.com/999MS-LLC/WaveStrap/raw/main/Images/wavestrap-dark.png#gh-dark-mode-only" width="420">
