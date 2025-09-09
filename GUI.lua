@@ -1,4 +1,73 @@
 local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local player = Players.LocalPlayer
+
+-- === Loading Screen ===
+local loadingGui = Instance.new("ScreenGui")
+loadingGui.Name = "LoadingScreen"
+loadingGui.ResetOnSpawn = false
+loadingGui.Parent = player:WaitForChild("PlayerGui")
+
+local loadingFrame = Instance.new("Frame")
+loadingFrame.Size = UDim2.new(1,0,1,0)
+loadingFrame.Position = UDim2.new(0,0,0,0)
+loadingFrame.BackgroundColor3 = Color3.fromRGB(20,20,25)
+loadingFrame.BorderSizePixel = 0
+loadingFrame.BackgroundTransparency = 0.1
+loadingFrame.Parent = loadingGui
+
+-- Glow effect
+local uiGradient = Instance.new("UIGradient")
+uiGradient.Rotation = 45
+uiGradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(0,170,255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(0,120,215))
+})
+uiGradient.Parent = loadingFrame
+
+-- Loading Text
+local loadingLabel = Instance.new("TextLabel")
+loadingLabel.Size = UDim2.new(1,0,0,50)
+loadingLabel.Position = UDim2.new(0,0,0.5,-25)
+loadingLabel.BackgroundTransparency = 1
+loadingLabel.Text = "Loading 999MS..."
+loadingLabel.TextColor3 = Color3.fromRGB(255,255,255)
+loadingLabel.Font = Enum.Font.Code
+loadingLabel.TextSize = 30
+loadingLabel.TextStrokeTransparency = 0.5
+loadingLabel.Parent = loadingFrame
+
+-- Progress bar back
+local progressBarBack = Instance.new("Frame")
+progressBarBack.Size = UDim2.new(0.6,0,0,15)
+progressBarBack.Position = UDim2.new(0.2,0,0.65,0)
+progressBarBack.BackgroundColor3 = Color3.fromRGB(40,40,50)
+progressBarBack.BorderSizePixel = 0
+progressBarBack.Parent = loadingFrame
+progressBarBack.ClipsDescendants = true
+progressBarBack.AnchorPoint = Vector2.new(0.5,0)
+
+-- Progress bar
+local progressBar = Instance.new("Frame")
+progressBar.Size = UDim2.new(0,0,1,0)
+progressBar.Position = UDim2.new(0,0,0,0)
+progressBar.BackgroundColor3 = Color3.fromRGB(0,170,255)
+progressBar.BorderSizePixel = 0
+progressBar.Parent = progressBarBack
+
+-- Tween progress bar (4s)
+local tween = TweenService:Create(progressBar, TweenInfo.new(4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1,0,1,0)})
+tween:Play()
+
+-- Ẩn loading và show GUI 999MS sau 4s
+delay(4, function()
+    -- Fade out loading
+    local fadeTween = TweenService:Create(loadingFrame, TweenInfo.new(0.5), {BackgroundTransparency = 1})
+    fadeTween:Play()
+    fadeTween.Completed:Connect(function()
+        loadingGui:Destroy()
+
+        local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local player = Players.LocalPlayer
@@ -185,4 +254,6 @@ delay(4, function()
         codeBox.Text = ""
     end)
 
+end)
+    end)
 end)
