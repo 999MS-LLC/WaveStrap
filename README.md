@@ -10,7 +10,6 @@
 
 [![License][shield-repo-license]][repo-license]
 [![GitHub Workflow Status][shield-repo-workflow]][repo-actions]
-[![Crowdin][shield-crowdin-status]][crowdin-project]
 [![Downloads][shield-repo-releases]][repo-releases]
 [![Version][shield-repo-latest]][repo-latest]
 [![Discord][shield-discord-server]][discord-invite]
@@ -62,9 +61,8 @@ Wavestrap uses the [WPF UI](https://github.com/lepoco/wpfui) library for the use
 [shield-repo-releases]: https://img.shields.io/github/downloads/999MS-LLC/Wavestrap/latest/total?color=981bfe
 [shield-repo-latest]:   https://img.shields.io/github/v/release/999MS-LLC/Wavestrap?color=7a39fb
 
-[shield-crowdin-status]: https://badges.crowdin.net/Wavestrap/localized.svg
-[shield-discord-server]: https://img.shields.io/discord/1099468797410283540?logo=discord&logoColor=white&label=discord&color=4d3dff
-[shield-tenor-meme]:     https://img.shields.io/badge/mom_made-pizza_rolls-orange
+[shield-discord-server]: https://img.shields.io/discord/1330274257996873779?logo=discord&logoColor=white&label=discord&color=4d3dff
+[shield-tenor-meme]:     [https://img.shields.io/badge/mom_made-pizza_rolls-orange](https://img.shields.io/badge/mom_made-Nguyen_Minh_Nhat-orange)
 
 [repo-license]:  https://github.com/999MS-LLC/WaveStrap/blob/main/LICENSE
 [repo-actions]:  https://github.com/999MS-LLC/WaveStrap/actions
