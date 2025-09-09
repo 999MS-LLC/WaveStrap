@@ -13,7 +13,6 @@
 [![Downloads][shield-repo-releases]][repo-releases]
 [![Version][shield-repo-latest]][repo-latest]
 [![Discord][shield-discord-server]][discord-invite]
-[![lol][shield-tenor-meme]][tenor-gif]
 
 </div>
 
@@ -62,7 +61,6 @@ Wavestrap uses the [WPF UI](https://github.com/lepoco/wpfui) library for the use
 [shield-repo-latest]:   https://img.shields.io/github/v/release/999MS-LLC/Wavestrap?color=7a39fb
 
 [shield-discord-server]: https://img.shields.io/discord/1330274257996873779?logo=discord&logoColor=white&label=discord&color=4d3dff
-[shield-tenor-meme]:     [https://img.shields.io/badge/mom_made-pizza_rolls-orange](https://img.shields.io/badge/mom_made-Nguyen_Minh_Nhat-orange)
 
 [repo-license]:  https://github.com/999MS-LLC/WaveStrap/blob/main/LICENSE
 [repo-actions]:  https://github.com/999MS-LLC/WaveStrap/actions
@@ -70,7 +68,6 @@ Wavestrap uses the [WPF UI](https://github.com/lepoco/wpfui) library for the use
 [repo-latest]:   https://github.com/999MS-LLC/WaveStrap/releases/latest
 
 [discord-invite]:  https://discord.gg/ZsHEZS8Zta
-[tenor-gif]:       https://media.tenor.com/FIkSGbGycmAAAAAd/manly-roblox.gif
 
 ## Code signing policy
 
